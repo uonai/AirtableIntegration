@@ -2,6 +2,8 @@
   "AppKey": "APPKEY",
   "BaseId": "BASEID",
   "TableName": "TABLENAME",
+  "BlobContainerName": "BLOBCONTAINERNAME",
+  "StorageConnectionString": "STORAGECONNECTIONSTRING",
   "IsEncrypted": false,
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
