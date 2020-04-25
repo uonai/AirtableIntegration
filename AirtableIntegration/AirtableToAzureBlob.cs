@@ -26,15 +26,12 @@ namespace AirtableIntegration
 
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
-
             string baseId = config["BaseId"];
             string appKey = config["AppKey"];
             string tableName = config["TableName"];
             string storageConnectionString = config["StorageConnectionString"];
             string blobContainerName = config["BlobContainerName"];
             string fileName = "tableData.json";
-
-
             string offset = null;
             string errorMessage = null;
             var records = new List<AirtableRecord>();
@@ -86,6 +83,7 @@ namespace AirtableIntegration
         }
         private static async Task WriteToBlobStorage(string storageConnectionString, string blobContainerName, string fileName, object records)
         {
+
             try
             {
                 var serializedData = JsonConvert.SerializeObject(records);
@@ -112,8 +110,4 @@ namespace AirtableIntegration
             }
         }
     }
-
-   
-
-
 }
