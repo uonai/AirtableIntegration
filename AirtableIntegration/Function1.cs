@@ -9,13 +9,8 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-
-
-
 namespace AirtableIntegration
 {
-
-
     public static class Function1
     {
         [FunctionName("AirtableFetch")]
